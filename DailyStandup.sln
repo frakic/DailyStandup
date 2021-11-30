@@ -3,7 +3,21 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.0.31912.275
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DailyStandup.Api", "DailyStandup.Api\DailyStandup.Api.csproj", "{E413296A-B402-49CD-B709-5424C3CAAC5B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DailyStandup.Api", "DailyStandup.Api\DailyStandup.Api.csproj", "{E413296A-B402-49CD-B709-5424C3CAAC5B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DailyStandup.Contract", "DailyStandup.Contract\DailyStandup.Contract.csproj", "{CA7B52F1-11E0-4C41-9403-91E6283B2563}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DailyStandup.Service", "DailyStandup.Service\DailyStandup.Service.csproj", "{54E2C11B-EB93-4D13-B453-A9241CE94E4E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DailyStandup.Model", "DailyStandup.Model\DailyStandup.Model.csproj", "{40426976-491D-4A6E-9B39-FE2D2936FEC1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DailyStandup.Repository", "DailyStandup.Repository\DailyStandup.Repository.csproj", "{BF699575-9A2A-4255-9C47-7B3CDE4AFC84}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Infrastructure", "Infrastructure", "{D8FD437E-6B34-4EC4-AC8C-7BA7C287EA33}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Applications", "Applications", "{0744CBEC-66F8-425A-B586-6F5C4C1D4035}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DailyStandup.Infrastructure", "DailyStandup.Infrastructure\DailyStandup.Infrastructure.csproj", "{60AD0C74-88F9-4C97-8EC7-41408976E2DD}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,9 +29,37 @@ Global
 		{E413296A-B402-49CD-B709-5424C3CAAC5B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E413296A-B402-49CD-B709-5424C3CAAC5B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E413296A-B402-49CD-B709-5424C3CAAC5B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CA7B52F1-11E0-4C41-9403-91E6283B2563}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CA7B52F1-11E0-4C41-9403-91E6283B2563}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CA7B52F1-11E0-4C41-9403-91E6283B2563}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CA7B52F1-11E0-4C41-9403-91E6283B2563}.Release|Any CPU.Build.0 = Release|Any CPU
+		{54E2C11B-EB93-4D13-B453-A9241CE94E4E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{54E2C11B-EB93-4D13-B453-A9241CE94E4E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{54E2C11B-EB93-4D13-B453-A9241CE94E4E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{54E2C11B-EB93-4D13-B453-A9241CE94E4E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{40426976-491D-4A6E-9B39-FE2D2936FEC1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{40426976-491D-4A6E-9B39-FE2D2936FEC1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{40426976-491D-4A6E-9B39-FE2D2936FEC1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{40426976-491D-4A6E-9B39-FE2D2936FEC1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BF699575-9A2A-4255-9C47-7B3CDE4AFC84}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BF699575-9A2A-4255-9C47-7B3CDE4AFC84}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BF699575-9A2A-4255-9C47-7B3CDE4AFC84}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BF699575-9A2A-4255-9C47-7B3CDE4AFC84}.Release|Any CPU.Build.0 = Release|Any CPU
+		{60AD0C74-88F9-4C97-8EC7-41408976E2DD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{60AD0C74-88F9-4C97-8EC7-41408976E2DD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{60AD0C74-88F9-4C97-8EC7-41408976E2DD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{60AD0C74-88F9-4C97-8EC7-41408976E2DD}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{E413296A-B402-49CD-B709-5424C3CAAC5B} = {0744CBEC-66F8-425A-B586-6F5C4C1D4035}
+		{CA7B52F1-11E0-4C41-9403-91E6283B2563} = {0744CBEC-66F8-425A-B586-6F5C4C1D4035}
+		{54E2C11B-EB93-4D13-B453-A9241CE94E4E} = {0744CBEC-66F8-425A-B586-6F5C4C1D4035}
+		{40426976-491D-4A6E-9B39-FE2D2936FEC1} = {0744CBEC-66F8-425A-B586-6F5C4C1D4035}
+		{BF699575-9A2A-4255-9C47-7B3CDE4AFC84} = {0744CBEC-66F8-425A-B586-6F5C4C1D4035}
+		{60AD0C74-88F9-4C97-8EC7-41408976E2DD} = {D8FD437E-6B34-4EC4-AC8C-7BA7C287EA33}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {F2DC224E-3E41-4142-B0F0-3DB01F3CE119}

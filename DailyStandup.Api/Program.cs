@@ -1,4 +1,10 @@
+using DailyStandup.Api.Configurations;
+
 var builder = WebApplication.CreateBuilder(args);
+
+builder.Configuration.AddJsonFile($"appsettings.{Environment.GetEnvironmentVariable("ASPNETCORE_ENVIRONMENT")}.json", true);
+
+builder.Services.AddServices(builder.Configuration);
 
 builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();

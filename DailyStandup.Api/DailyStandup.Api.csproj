@@ -9,12 +9,18 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="6.0.0" />
+    <PackageReference Include="Microsoft.Extensions.DependencyInjection" Version="6.0.0" />
     <PackageReference Include="Microsoft.VisualStudio.Azure.Containers.Tools.Targets" Version="1.14.0" />
+    <PackageReference Include="Npgsql.EntityFrameworkCore.PostgreSQL" Version="6.0.0" />
     <PackageReference Include="Swashbuckle.AspNetCore" Version="6.2.3" />
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Controllers\" />
+    <ProjectReference Include="..\DailyStandup.Contract\DailyStandup.Contract.csproj" />
+    <ProjectReference Include="..\DailyStandup.Infrastructure\DailyStandup.Infrastructure.csproj" />
+    <ProjectReference Include="..\DailyStandup.Repository\DailyStandup.Repository.csproj" />
+    <ProjectReference Include="..\DailyStandup.Service\DailyStandup.Service.csproj" />
   </ItemGroup>
 
 </Project>

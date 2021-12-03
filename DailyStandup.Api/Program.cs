@@ -1,4 +1,7 @@
 using DailyStandup.Api.Configurations;
+using DailyStandup.Infrastructure.AspNetCore.Extensions;
+using DailyStandup.Infrastructure.AspNetCore.Middlewares.Error;
+using FluentValidation.AspNetCore;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -6,7 +9,10 @@ builder.Configuration.AddJsonFile($"appsettings.{Environment.GetEnvironmentVaria
 
 builder.Services.AddServices(builder.Configuration);
 
-builder.Services.AddControllers();
+builder.Services.AddFluentValidationValidatorInterceptor();
+builder.Services.AddExceptionHandlers();
+builder.Services.AddControllers().AddFluentValidation();
+
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
@@ -23,5 +29,7 @@ app.UseHttpsRedirection();
 app.UseAuthorization();
 
 app.MapControllers();
+
+app.UseMiddleware<ErrorMiddleware>();
 
 app.Run();

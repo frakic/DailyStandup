@@ -15,7 +15,7 @@ public class SpaceController : ControllerBase
     }
 
     [HttpPost]
-    public async Task CreateAsync([FromBody] CreateSpaceDto input)
+    public async Task CreateAsync([FromBody] CreateUpdateSpaceDto input)
     {
         await _spaceService.CreateAsync(input);
     }

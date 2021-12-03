@@ -4,6 +4,7 @@ using DailyStandup.Model.Spaces;
 using DailyStandup.Repository;
 using DailyStandup.Repository.Spaces;
 using DailyStandup.Service.Spaces;
+using FluentValidation;
 using Microsoft.EntityFrameworkCore;
 
 namespace DailyStandup.Api.Configurations;
@@ -15,6 +16,7 @@ public static class IoCConfiguration
     {
         ConfigureRepositories(services, configuration);
         ConfigureServices(services);
+        ConfigureValidators(services);
     }
 
     private static void ConfigureRepositories(IServiceCollection services, IConfiguration configuration)
@@ -32,5 +34,10 @@ public static class IoCConfiguration
     private static void ConfigureServices(IServiceCollection services)
     {
         services.AddTransient<ISpaceService, SpaceService>();
+    }
+
+    private static void ConfigureValidators(IServiceCollection services)
+    {
+        services.AddTransient<IValidator<CreateUpdateSpaceDto>, CreateUpdateSpaceDtoValidator>();
     }
 }

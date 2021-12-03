@@ -2,6 +2,6 @@
 
 public interface ISpaceService
 {
-    Task CreateAsync(CreateSpaceDto input);
+    Task CreateAsync(CreateUpdateSpaceDto input);
 }
 

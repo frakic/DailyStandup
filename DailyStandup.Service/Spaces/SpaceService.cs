@@ -13,7 +13,7 @@ public class SpaceService : ISpaceService
         _spaceRepository = spaceRepository;
         _unitOfWork = unitOfWork;
     }
-    public async Task CreateAsync(CreateSpaceDto input)
+    public async Task CreateAsync(CreateUpdateSpaceDto input)
     {
         var space = new Space(input.Name!);
 
